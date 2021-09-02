@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="../reveal.js-master/dist/reset.css">
+    <link rel="stylesheet" href="../reveal.js-master/dist/reveal.css">
+    <link rel="stylesheet" href="../reveal.js-master/dist/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../reveal.js-master/plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides" style="font-size: smaller;">
+            <section> <pre><code data-trim data-noescape>
+Cipher(byte in[4*Nb], byte out[4*Nb], word w[Nb*(Nr+1)])
+ begin
+   byte state[4,Nb]
+   state = in
+   AddRoundKey(state, w[0, Nb-1])
+   for round = 1 step 1 to Nr–1
+      SubBytes(state)
+      ShiftRows(state)
+      MixColumns(state)
+      AddRoundKey(state, w[round*Nb, (round+1)*Nb-1])
+   end for
+   SubBytes(state)
+   ShiftRows(state)
+   AddRoundKey(state, w[Nr*Nb, (Nr+1)*Nb-1])
+   out = state
+ end
+</code></pre>
+            </section>
+
+
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+
+    <script src="../reveal.js-master/dist/reveal.js"></script>
+    <script src="../reveal.js-master/plugin/notes/notes.js"></script>
+    <script src="../reveal.js-master/plugin/markdown/markdown.js"></script>
+    <script src="../reveal.js-master/plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

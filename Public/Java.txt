@@ -1,0 +1,26 @@
+1. (c) este obiect imutabil=nu se modifica
+
+2. (a), (c), (d)
+Pentru (b) lucrul respectiv nu este aplicabil.
+
+3. (a), (c)
+
+4. (a), (c)
+
+5. (a), (b)
+
+6. (b) -> nu este permisa mostenirea multipla
+si (d) -> deoarece constructorii nu se mostenesc
+
+7. (b), (d)
+
+8. (a), (c). NU este (d) ca la apel nu se stie tipul de retur.
+
+9. (b)
+
+10. (b) - dupa static se apeleaza instanta de bloc, apoi 
+constructorul, apoi metoda.
+
+11. (b) deoarece se ia in ordine. TreeSet le ordoneaza
+
+

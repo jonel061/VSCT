@@ -1,0 +1,9 @@
+import java.sql.*;
+import java.util.*;
+try
+{
+Class.forName("oracle.jdbc.driver.Oracle.Driver").newInstance();
+} catch (Exception e) {
+  	// driver not found
+  	e.printStackTrace();
+}
